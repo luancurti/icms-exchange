@@ -3,604 +3,504 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ICMS Exchange | Compra e Venda de Créditos de ICMS</title>
-  <meta name="description" content="Intermediação segura de compra e venda de créditos de ICMS com deságio, homologação e compliance tributário." />
+
+  <title>ICMS Exchange | Marketplace de Créditos de ICMS em São Paulo</title>
+
+  <meta
+    name="description"
+    content="Marketplace de compra e venda de créditos de ICMS em São Paulo. Homologação e-CredAc, CAT 42, CAT 83, auditoria tributária, conta escrow e operações com deságio e segurança jurídica."
+  />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
+    html{
+      scroll-behavior:smooth;
     }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #07111f;
-      color: #f5f7fa;
-      line-height: 1.6;
-      overflow-x: hidden;
+    body{
+      font-family:'Inter',sans-serif;
+      background:#07111f;
+      color:#f5f7fa;
+      line-height:1.6;
+      overflow-x:hidden;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
+    a{
+      text-decoration:none;
+      color:inherit;
     }
 
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:0 auto;
     }
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(7, 17, 31, 0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(7,17,31,0.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,0.06);
     }
 
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 0;
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 0;
     }
 
-    .logo {
-      font-size: 1.4rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
+    .logo{
+      font-size:1.4rem;
+      font-weight:800;
+      letter-spacing:-0.5px;
     }
 
-    .logo span {
-      color: #00d4ff;
+    .logo span{
+      color:#00d4ff;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      align-items: center;
+    .nav-links{
+      display:flex;
+      gap:28px;
+      align-items:center;
     }
 
-    .nav-links a {
-      color: #d4d9e1;
-      transition: 0.3s;
-      font-size: 0.95rem;
+    .nav-links a{
+      color:#d4d9e1;
+      transition:0.3s;
+      font-size:0.95rem;
     }
 
-    .nav-links a:hover {
-      color: #00d4ff;
+    .nav-links a:hover{
+      color:#00d4ff;
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 26px;
-      border-radius: 14px;
-      border: none;
-      cursor: pointer;
-      font-weight: 600;
-      transition: 0.3s;
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 26px;
+      border-radius:14px;
+      border:none;
+      cursor:pointer;
+      font-weight:600;
+      transition:0.3s;
     }
 
-    .btn-primary {
-      background: linear-gradient(135deg, #00d4ff, #0066ff);
-      color: white;
-      box-shadow: 0 10px 30px rgba(0, 153, 255, 0.25);
+    .btn-primary{
+      background:linear-gradient(135deg,#00d4ff,#0066ff);
+      color:white;
+      box-shadow:0 10px 30px rgba(0,153,255,0.25);
     }
 
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 15px 40px rgba(0, 153, 255, 0.35);
+    .btn-primary:hover{
+      transform:translateY(-2px);
+      box-shadow:0 15px 40px rgba(0,153,255,0.35);
     }
 
-    .btn-outline {
-      border: 1px solid rgba(255,255,255,0.12);
-      color: white;
-      background: transparent;
+    .btn-outline{
+      border:1px solid rgba(255,255,255,0.12);
+      color:white;
+      background:transparent;
     }
 
-    .hero {
-      padding: 110px 0 80px;
+    .hero{
+      padding:110px 0 80px;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 1fr;
-      gap: 60px;
-      align-items: center;
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr 1fr;
+      gap:60px;
+      align-items:center;
     }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(0,212,255,0.1);
-      border: 1px solid rgba(0,212,255,0.2);
-      color: #79e8ff;
-      padding: 10px 16px;
-      border-radius: 999px;
-      margin-bottom: 24px;
-      font-size: 0.92rem;
-      flex-wrap: wrap;
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      background:rgba(0,212,255,0.1);
+      border:1px solid rgba(0,212,255,0.2);
+      color:#79e8ff;
+      padding:10px 16px;
+      border-radius:999px;
+      margin-bottom:24px;
+      font-size:0.92rem;
+      flex-wrap:wrap;
     }
 
-    .hero h1 {
-      font-size: 4rem;
-      line-height: 1.02;
-      font-weight: 800;
-      letter-spacing: -2px;
-      margin-bottom: 24px;
+    .hero h1{
+      font-size:4rem;
+      line-height:1.02;
+      font-weight:800;
+      letter-spacing:-2px;
+      margin-bottom:24px;
     }
 
-    .hero h1 span {
-      color: #00d4ff;
+    .hero h1 span{
+      color:#00d4ff;
     }
 
-    .hero p {
-      color: #b8c2cf;
-      font-size: 1.12rem;
-      margin-bottom: 30px;
-      max-width: 640px;
+    .hero p{
+      color:#b8c2cf;
+      font-size:1.12rem;
+      margin-bottom:30px;
+      max-width:640px;
     }
 
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 26px;
+    .hero-actions{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-bottom:26px;
     }
 
-    .hero-list {
-      display: grid;
-      gap: 12px;
-      color: #d8e1eb;
+    .hero-list{
+      display:grid;
+      gap:12px;
+      color:#d8e1eb;
     }
 
     .hero-card,
     .pricing,
     .card,
     .timeline-item,
-    .segment-box {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
-      backdrop-filter: blur(12px);
+    .segment-box{
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.06);
+      backdrop-filter:blur(12px);
     }
 
-    .hero-card {
-      border-radius: 28px;
-      padding: 40px;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+    .hero-card{
+      border-radius:28px;
+      padding:40px;
+      box-shadow:0 30px 80px rgba(0,0,0,0.35);
     }
 
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-      margin-top: 28px;
+    .stat-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+      margin-top:28px;
     }
 
-    .stat {
-      background: rgba(255,255,255,0.04);
-      border-radius: 18px;
-      padding: 20px;
-      border: 1px solid rgba(255,255,255,0.06);
+    .stat{
+      background:rgba(255,255,255,0.04);
+      border-radius:18px;
+      padding:20px;
+      border:1px solid rgba(255,255,255,0.06);
     }
 
-    .stat h3 {
-      color: #00d4ff;
-      font-size: 1.7rem;
-      margin-bottom: 6px;
+    .stat h3{
+      color:#00d4ff;
+      font-size:1.7rem;
+      margin-bottom:6px;
     }
 
-    .section {
-      padding: 90px 0;
+    .section{
+      padding:90px 0;
     }
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 60px;
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
     }
 
-    .section-title h2 {
-      font-size: 2.8rem;
-      margin-bottom: 14px;
-      letter-spacing: -1px;
+    .section-title h2{
+      font-size:2.8rem;
+      margin-bottom:14px;
+      letter-spacing:-1px;
     }
 
-    .section-title p {
-      max-width: 780px;
-      margin: 0 auto;
-      color: #aeb9c7;
+    .section-title p{
+      max-width:780px;
+      margin:0 auto;
+      color:#aeb9c7;
     }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 24px;
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:24px;
     }
 
-    .card {
-      border-radius: 24px;
-      padding: 32px;
-      transition: 0.3s;
+    .card{
+      border-radius:24px;
+      padding:32px;
+      transition:0.3s;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(0,212,255,0.35);
+    .card:hover{
+      transform:translateY(-5px);
+      border-color:rgba(0,212,255,0.35);
     }
 
-    .card-icon {
-      width: 58px;
-      height: 58px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #00d4ff, #0066ff);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      margin-bottom: 22px;
+    .card-icon{
+      width:58px;
+      height:58px;
+      border-radius:16px;
+      background:linear-gradient(135deg,#00d4ff,#0066ff);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.3rem;
+      margin-bottom:22px;
     }
 
-    .card h3 {
-      margin-bottom: 12px;
-      font-size: 1.25rem;
+    .card h3{
+      margin-bottom:12px;
+      font-size:1.25rem;
     }
 
-    .card p {
-      color: #b8c2cf;
+    .card p{
+      color:#b8c2cf;
     }
 
-    .timeline {
-      display: grid;
-      gap: 24px;
-      max-width: 900px;
-      margin: 0 auto;
+    .timeline{
+      display:grid;
+      gap:24px;
+      max-width:900px;
+      margin:0 auto;
     }
 
-    .timeline-item {
-      display: flex;
-      gap: 24px;
-      align-items: flex-start;
-      padding: 28px;
-      border-radius: 24px;
+    .timeline-item{
+      display:flex;
+      gap:24px;
+      align-items:flex-start;
+      padding:28px;
+      border-radius:24px;
     }
 
-    .timeline-number {
-      min-width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #00d4ff, #0066ff);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 1.05rem;
+    .timeline-number{
+      min-width:58px;
+      height:58px;
+      border-radius:50%;
+      background:linear-gradient(135deg,#00d4ff,#0066ff);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:1.05rem;
     }
 
-    .two-columns {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 28px;
+    .two-columns{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:28px;
     }
 
-    .segment-box {
-      border-radius: 24px;
-      padding: 32px;
+    .segment-box{
+      border-radius:24px;
+      padding:32px;
     }
 
-    .segment-box h3 {
-      margin-bottom: 18px;
-      font-size: 1.5rem;
+    .segment-box h3{
+      margin-bottom:18px;
+      font-size:1.5rem;
     }
 
-    .segment-box ul {
-      display: grid;
-      gap: 12px;
-      padding-left: 18px;
-      color: #d4dde7;
+    .segment-box ul{
+      display:grid;
+      gap:12px;
+      padding-left:18px;
+      color:#d4dde7;
     }
 
-    .pricing {
-      border-radius: 32px;
-      padding: 50px;
-      text-align: center;
-      max-width: 950px;
-      margin: 0 auto;
-      background: linear-gradient(180deg, rgba(0,153,255,0.08), rgba(255,255,255,0.02));
+    .pricing{
+      border-radius:32px;
+      padding:50px;
+      text-align:center;
+      max-width:950px;
+      margin:0 auto;
+      background:linear-gradient(
+        180deg,
+        rgba(0,153,255,0.08),
+        rgba(255,255,255,0.02)
+      );
     }
 
-    .pricing h3 {
-      font-size: 2rem;
-      margin-bottom: 16px;
+    .pricing h3{
+      font-size:2rem;
+      margin-bottom:16px;
     }
 
-    .pricing strong {
-      color: #00d4ff;
+    .pricing strong{
+      color:#00d4ff;
     }
 
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
+    .benefits-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:24px;
     }
 
-    .contact {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
+    .contact{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
     }
 
-    form {
-      display: grid;
-      gap: 18px;
+    form{
+      display:grid;
+      gap:18px;
     }
 
     input,
-    textarea {
-      width: 100%;
-      padding: 16px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.04);
-      color: white;
-      font-family: inherit;
-      font-size: 1rem;
+    textarea{
+      width:100%;
+      padding:16px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,0.08);
+      background:rgba(255,255,255,0.04);
+      color:white;
+      font-family:inherit;
+      font-size:1rem;
     }
 
-    textarea {
-      min-height: 140px;
-      resize: vertical;
+    textarea{
+      min-height:140px;
+      resize:vertical;
     }
 
-    footer {
-      padding: 40px 0;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      margin-top: 80px;
+    footer{
+      padding:40px 0;
+      border-top:1px solid rgba(255,255,255,0.06);
+      margin-top:80px;
     }
 
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-      color: #9aa7b8;
+    .footer-content{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+      color:#9aa7b8;
     }
 
-    @media (max-width: 980px) {
-      .hero-grid,
-      .contact,
-      .two-columns {
-        grid-template-columns: 1fr;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .hero h1 {
-        font-size: 3rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        width: 94%;
-      }
-
-      header {
-        position: relative;
-      }
-
-      .nav {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 16px;
-        padding: 18px 0;
-      }
-
-      .logo {
-        font-size: 1.5rem;
-        text-align: center;
-      }
-
-      .hero {
-        padding: 30px 0 40px;
-      }
+    @media (max-width:980px){
 
       .hero-grid,
       .contact,
-      .two-columns {
-        grid-template-columns: 1fr;
-        gap: 28px;
+      .two-columns{
+        grid-template-columns:1fr;
       }
 
-      .hero h1 {
-        font-size: 2.25rem;
-        line-height: 0.98;
-        letter-spacing: -1.5px;
-        margin-bottom: 20px;
+      .nav-links{
+        display:none;
       }
 
-      .hero p {
-        font-size: 1rem;
-        line-height: 1.75;
-        margin-bottom: 24px;
+      .hero h1{
+        font-size:3rem;
+      }
+    }
+
+    @media (max-width:768px){
+
+      .container{
+        width:94%;
       }
 
-      .badge {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-        line-height: 1.6;
-        padding: 14px 18px;
-        border-radius: 22px;
-        font-size: 0.9rem;
+      header{
+        position:relative;
       }
 
-      .hero-actions {
-        flex-direction: column;
-        gap: 14px;
-        margin-bottom: 24px;
+      .nav{
+        flex-direction:column;
+        align-items:stretch;
+        gap:16px;
       }
 
-      .btn {
-        width: 100%;
-        min-height: 56px;
-        font-size: 1rem;
-        border-radius: 16px;
+      .logo{
+        text-align:center;
       }
 
-      .hero-list {
-        gap: 14px;
-        font-size: 0.98rem;
-        line-height: 1.5;
+      .hero{
+        padding:40px 0;
+      }
+
+      .hero h1{
+        font-size:2.3rem;
+        line-height:1;
+      }
+
+      .hero-actions{
+        flex-direction:column;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+      .section{
+        padding:55px 0;
+      }
+
+      .section-title h2{
+        font-size:2rem;
       }
 
       .hero-card,
       .pricing,
       .card,
-      .segment-box,
-      .timeline-item {
-        padding: 24px;
-        border-radius: 22px;
+      .timeline-item,
+      .segment-box{
+        padding:24px;
       }
 
-      .hero-card {
-        margin-top: 6px;
+      .timeline-item{
+        flex-direction:column;
       }
 
-      .hero-card h2 {
-        font-size: 1.7rem !important;
-        line-height: 1.15;
+      .stat-grid{
+        grid-template-columns:1fr;
       }
 
-      .section {
-        padding: 54px 0;
-      }
-
-      .section-title {
-        margin-bottom: 34px;
-      }
-
-      .section-title h2 {
-        font-size: 1.95rem;
-        line-height: 1.08;
-        margin-bottom: 16px;
-      }
-
-      .section-title p {
-        font-size: 0.98rem;
-        line-height: 1.7;
-      }
-
-      .cards,
-      .benefits-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-      }
-
-      .card {
-        padding: 24px;
-      }
-
-      .card h3 {
-        font-size: 1.15rem;
-      }
-
-      .card p {
-        font-size: 0.96rem;
-        line-height: 1.7;
-      }
-
-      .timeline {
-        gap: 18px;
-      }
-
-      .timeline-item {
-        flex-direction: column;
-        gap: 18px;
-      }
-
-      .timeline-number {
-        min-width: 52px;
-        height: 52px;
-        font-size: 1rem;
-      }
-
-      .segment-box ul {
-        gap: 14px;
-        font-size: 0.98rem;
-      }
-
-      .stat-grid {
-        grid-template-columns: 1fr;
-        gap: 14px;
-      }
-
-      .stat {
-        padding: 18px;
-      }
-
-      .pricing {
-        padding: 28px 22px;
-      }
-
-      .pricing h3 {
-        font-size: 1.7rem;
-        line-height: 1.15;
-      }
-
-      form {
-        gap: 14px;
-      }
-
-      input,
-      textarea {
-        padding: 16px;
-        font-size: 16px;
-        border-radius: 14px;
-      }
-
-      textarea {
-        min-height: 120px;
-      }
-
-      .footer-content {
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
+      .footer-content{
+        flex-direction:column;
+        text-align:center;
       }
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <div class="container nav">
-    <div class="logo">ICMS<span>Exchange</span></div>
+
+    <div class="logo">
+      ICMS<span>Exchange</span>
+    </div>
 
     <div class="nav-links">
       <a href="#solucao">Solução</a>
+      <a href="#processo">Processo</a>
       <a href="#modelo">Modelo</a>
       <a href="#segmentos">Segmentos</a>
       <a href="#seguranca">Segurança</a>
       <a href="#contato">Contato</a>
     </div>
 
-    <a href="#contato" class="btn btn-primary">Falar com Especialista</a>
+    <a href="#contato" class="btn btn-primary">
+      Falar com Especialista
+    </a>
+
   </div>
 </header>
 
@@ -608,47 +508,61 @@
   <div class="container hero-grid">
 
     <div>
+
       <div class="badge">
-        ✔ Conta Escrow • ✔ Compliance • ✔ Homologação e-CredAc
+        ✔ Marketplace ICMS • ✔ e-CredAc • ✔ CAT 42 • ✔ Compliance Tributário
       </div>
 
       <h1>
-        Compra e venda de <span>créditos de ICMS</span> com deságio e segurança institucional.
+        Marketplace de
+        <span>créditos de ICMS</span>
+        com segurança jurídica, homologação e deságio competitivo.
       </h1>
 
       <p>
-        Estruturamos operações de cessão de créditos tributários com deságio utilizando conta escrow, validação documental, homologação e compliance tributário completo para proteger compradores e vendedores em operações de alto valor.
+        Conectamos empresas que desejam vender créditos acumulados de ICMS a compradores qualificados no estado de São Paulo. Estruturamos operações completas com validação documental, auditoria tributária, homologação e-CredAc, conta escrow e suporte especializado junto à SEFAZ/SP.
       </p>
 
       <div class="hero-actions">
-        <a href="#contato" class="btn btn-primary">Solicitar Análise</a>
-        <a href="#processo" class="btn btn-outline">Entender o Processo</a>
+        <a href="#contato" class="btn btn-primary">
+          Solicitar Análise Gratuita
+        </a>
+
+        <a href="#processo" class="btn btn-outline">
+          Entender a Operação
+        </a>
       </div>
 
       <div class="hero-list">
-        <div>✔ Créditos validados antes da operação</div>
-        <div>✔ Segurança jurídica e tributária</div>
-        <div>✔ Aprovação acelerada junto à SEFAZ/SP</div>
-        <div>✔ Redução de risco de rejeição na SEFAZ/SP</div>
+        <div>✔ Compra e venda de ICMS com deságio</div>
+        <div>✔ Mais segurança para compradores e vendedores</div>
+        <div>✔ Auditoria fiscal e tributária preventiva</div>
+        <div>✔ Estruturação especializada CAT 42, CAT 83 e CAT 207</div>
+        <div>✔ Acompanhamento completo junto à SEFAZ/SP</div>
       </div>
+
     </div>
 
     <div class="hero-card">
-      <h2 style="margin-bottom: 14px; font-size: 1.9rem;">Mercado Bilionário</h2>
+
+      <h2 style="margin-bottom:14px;font-size:1.9rem;">
+        Operações Estruturadas de Alto Valor
+      </h2>
 
       <p style="color:#b7c1ce;">
-        Empresas com créditos acumulados transformam ativos tributários em caixa imediato, enquanto compradores reduzem carga tributária através da aquisição de créditos com deságio.
+        Nossa plataforma conecta empresas compradoras e vendedoras de créditos tributários com foco em segurança, agilidade, conformidade fiscal e melhor taxa de negociação.
       </p>
 
       <div class="stat-grid">
+
         <div class="stat">
-          <h3>2%+</h3>
-          <p>Comissão média por operação</p>
+          <h3>8.000+</h3>
+          <p>Checagens fiscais e eletrônicas</p>
         </div>
 
         <div class="stat">
-          <h3>100%</h3>
-          <p>Análise documental e fiscal</p>
+          <h3>CAT 42</h3>
+          <p>Ressarcimento ICMS ST</p>
         </div>
 
         <div class="stat">
@@ -658,9 +572,11 @@
 
         <div class="stat">
           <h3>Escrow</h3>
-          <p>Garantia entre as partes</p>
+          <p>Garantia operacional</p>
         </div>
+
       </div>
+
     </div>
 
   </div>
@@ -671,6 +587,7 @@
 
     <div class="section-title">
       <h2>Estrutura Completa de Intermediação</h2>
+
       <p>
         Atuamos como ponte segura entre empresas que desejam vender créditos acumulados de ICMS e empresas interessadas em adquirir créditos com deságio.
       </p>
@@ -680,7 +597,9 @@
 
       <div class="card">
         <div class="card-icon">⚖</div>
+
         <h3>Due Diligence Tributária</h3>
+
         <p>
           Validação da origem do crédito, análise fiscal, risco de glosa e análise jurídica especializada.
         </p>
@@ -688,7 +607,9 @@
 
       <div class="card">
         <div class="card-icon">✅</div>
+
         <h3>Validação e Homologação</h3>
+
         <p>
           Garantimos que o crédito seja verdadeiro, elegível e apto para aprovação junto à Secretaria da Fazenda do Estado de São Paulo.
         </p>
@@ -696,7 +617,9 @@
 
       <div class="card">
         <div class="card-icon">🔒</div>
+
         <h3>Conta Escrow</h3>
+
         <p>
           O pagamento fica protegido em conta garantia até a conclusão e validação integral da operação.
         </p>
@@ -704,166 +627,12 @@
 
       <div class="card">
         <div class="card-icon">📑</div>
+
         <h3>Compliance & Segurança Jurídica</h3>
+
         <p>
           Estrutura robusta de compliance tributário, mitigação de riscos e proteção contratual.
         </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="section" id="processo">
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Como Funciona a Operação</h2>
-      <p>
-        Fluxo estruturado para reduzir risco operacional, tributário, jurídico e financeiro em todas as etapas.
-      </p>
-    </div>
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <div class="timeline-number">1</div>
-        <div>
-          <h3>Captação e Análise</h3>
-          <p>
-            Recebemos documentação fiscal, SPED, apurações de ICMS e histórico tributário para avaliação técnica da operação.
-          </p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-number">2</div>
-        <div>
-          <h3>Due Diligence e Validação</h3>
-          <p>
-            Verificação jurídica, fiscal e operacional para garantir que o crédito seja legítimo, homologável e apto para cessão sem risco de rejeição pela SEFAZ/SP.
-          </p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-number">3</div>
-        <div>
-          <h3>Homologação e Estruturação</h3>
-          <p>
-            Realizamos a preparação técnica da operação, definição do deságio, estruturação contratual e suporte completo para homologação no e-CredAc.
-          </p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-number">4</div>
-        <div>
-          <h3>Conta Escrow</h3>
-          <p>
-            O comprador deposita os recursos em conta garantia antes da transferência do crédito tributário.
-          </p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-number">5</div>
-        <div>
-          <h3>Aprovação e Liquidação</h3>
-          <p>
-            Acompanhamos o processo até a aprovação da cessão e liberação financeira da operação com segurança jurídica para ambas as partes.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="section" id="modelo">
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Modelo de Operação Especializado</h2>
-      <p>
-        As operações mais eficientes e lucrativas do mercado exigem muito mais do que apenas encontrar compradores e vendedores.
-      </p>
-    </div>
-
-    <div class="cards">
-
-      <div class="card">
-        <div class="card-icon">📊</div>
-        <h3>Originação do Crédito</h3>
-        <p>
-          Mapeamento de empresas com alto volume de créditos acumulados de ICMS.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">🏛</div>
-        <h3>Homologação e-CredAc</h3>
-        <p>
-          Estruturação e acompanhamento técnico para aprovação da operação junto à SEFAZ/SP.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">🤝</div>
-        <h3>Match Estratégico</h3>
-        <p>
-          Conectamos empresas que desejam vender créditos com empresas interessadas em comprar créditos com deságio.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">🛡</div>
-        <h3>Estruturação Jurídica</h3>
-        <p>
-          Segurança operacional, análise documental e mitigação de risco fiscal para compradores e vendedores.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="section" id="segmentos">
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Segmentos em que Atuamos</h2>
-      <p>
-        Conectamos empresas com créditos acumulados a empresas com alta demanda tributária.
-      </p>
-    </div>
-
-    <div class="two-columns">
-
-      <div class="segment-box">
-        <h3>Empresas que vendem créditos</h3>
-
-        <ul>
-          <li>Agroindústria</li>
-          <li>Exportadores</li>
-          <li>Usinas</li>
-          <li>Cooperativas</li>
-          <li>Frigoríficos</li>
-          <li>Empresas com créditos acumulados</li>
-        </ul>
-      </div>
-
-      <div class="segment-box">
-        <h3>Empresas que compram créditos</h3>
-
-        <ul>
-          <li>Indústrias</li>
-          <li>Atacadistas</li>
-          <li>Varejo</li>
-          <li>Importadores</li>
-          <li>Distribuidores</li>
-          <li>Empresas com passivo fiscal</li>
-        </ul>
       </div>
 
     </div>
@@ -874,47 +643,379 @@
   <div class="container">
 
     <div class="section-title">
+      <h2>Especialistas em Recuperação e Homologação de Créditos</h2>
+
+      <p>
+        Atuamos em toda a cadeia de recuperação, homologação, auditoria e intermediação de créditos acumulados de ICMS no estado de São Paulo.
+      </p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-icon">📁</div>
+
+        <h3>CAT 207/2009</h3>
+
+        <p>
+          Estruturação simplificada para apropriação de créditos acumulados de ICMS com metodologia baseada em IVA.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🏭</div>
+
+        <h3>CAT 83/2009</h3>
+
+        <p>
+          Sistema de custeio avançado para homologação de créditos acumulados com controle completo de estoque e produção.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🔄</div>
+
+        <h3>CAT 42/2018</h3>
+
+        <p>
+          Ressarcimento de ICMS ST com geração e validação de arquivos eletrônicos para recuperação rápida e segura.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🧾</div>
+
+        <h3>Auditoria Tributária</h3>
+
+        <p>
+          Auditoria eletrônica preventiva com milhares de validações para reduzir riscos fiscais, glosas e inconsistências.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="processo">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Como Funciona a Operação</h2>
+
+      <p>
+        Fluxo estruturado para reduzir risco operacional, tributário, jurídico e financeiro em todas as etapas.
+      </p>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+
+        <div class="timeline-number">1</div>
+
+        <div>
+          <h3>Captação e Análise</h3>
+
+          <p>
+            Recebemos documentação fiscal, SPED, apurações de ICMS e histórico tributário para avaliação técnica da operação.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="timeline-number">2</div>
+
+        <div>
+          <h3>Due Diligence e Validação</h3>
+
+          <p>
+            Verificação jurídica, fiscal e operacional para garantir que o crédito seja legítimo, homologável e apto para cessão sem risco de rejeição pela SEFAZ/SP.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="timeline-number">3</div>
+
+        <div>
+          <h3>Homologação e Estruturação</h3>
+
+          <p>
+            Realizamos a preparação técnica da operação, definição do deságio, estruturação contratual e suporte completo para homologação no e-CredAc.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="timeline-number">4</div>
+
+        <div>
+          <h3>Conta Escrow</h3>
+
+          <p>
+            O comprador deposita os recursos em conta garantia antes da transferência do crédito tributário.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="timeline-number">5</div>
+
+        <div>
+          <h3>Aprovação e Liquidação</h3>
+
+          <p>
+            Acompanhamos o processo até a aprovação da cessão e liberação financeira da operação com segurança jurídica para ambas as partes.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="modelo">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Modelo de Operação Especializado</h2>
+
+      <p>
+        As operações mais eficientes e lucrativas do mercado exigem muito mais do que apenas encontrar compradores e vendedores.
+      </p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-icon">📊</div>
+
+        <h3>Originação do Crédito</h3>
+
+        <p>
+          Mapeamento de empresas com alto volume de créditos acumulados de ICMS.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🏛</div>
+
+        <h3>Homologação e-CredAc</h3>
+
+        <p>
+          Estruturação e acompanhamento técnico para aprovação da operação junto à SEFAZ/SP.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🤝</div>
+
+        <h3>Match Estratégico</h3>
+
+        <p>
+          Conectamos empresas que desejam vender créditos com empresas interessadas em comprar créditos com deságio.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🛡</div>
+
+        <h3>Estruturação Jurídica</h3>
+
+        <p>
+          Segurança operacional, análise documental e mitigação de risco fiscal para compradores e vendedores.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Modelos de Negociação</h2>
+
+      <p>
+        Estruturamos diferentes formatos de negociação conforme o perfil tributário e financeiro da operação.
+      </p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-icon">📉</div>
+
+        <h3>Compensação Futura</h3>
+
+        <p>
+          Compra de créditos para utilização futura em apurações tributárias.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">⚖</div>
+
+        <h3>Dívida Ativa</h3>
+
+        <p>
+          Estruturação de operações para regularização de passivos tributários estaduais.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">💵</div>
+
+        <h3>Antecipação de Recebíveis</h3>
+
+        <p>
+          Conversão de créditos acumulados em liquidez imediata para empresas vendedoras.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🏢</div>
+
+        <h3>Incorporação e Reestruturação</h3>
+
+        <p>
+          Operações estruturadas envolvendo reorganização societária e aproveitamento tributário.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="segmentos">
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Segmentos em que Atuamos</h2>
+
+      <p>
+        Conectamos empresas com créditos acumulados a empresas com alta demanda tributária.
+      </p>
+
+    </div>
+
+    <div class="two-columns">
+
+      <div class="segment-box">
+
+        <h3>Empresas que vendem créditos</h3>
+
+        <ul>
+          <li>Agroindústria</li>
+          <li>Exportadores</li>
+          <li>Usinas</li>
+          <li>Cooperativas</li>
+          <li>Frigoríficos</li>
+          <li>Empresas com créditos acumulados</li>
+        </ul>
+
+      </div>
+
+      <div class="segment-box">
+
+        <h3>Empresas que compram créditos</h3>
+
+        <ul>
+          <li>Indústrias</li>
+          <li>Atacadistas</li>
+          <li>Varejo</li>
+          <li>Importadores</li>
+          <li>Distribuidores</li>
+          <li>Empresas com passivo fiscal</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-title">
+
       <h2>Benefícios para Empresas Compradoras</h2>
+
       <p>
         Operações estruturadas para redução inteligente da carga tributária e melhora do fluxo de caixa.
       </p>
+
     </div>
 
     <div class="benefits-grid">
 
       <div class="card">
+
         <div class="card-icon">💰</div>
+
         <h3>Redução Tributária</h3>
+
         <p>
           Compra de créditos com deságio para redução eficiente do custo tributário.
         </p>
+
       </div>
 
       <div class="card">
+
         <div class="card-icon">📄</div>
+
         <h3>Regularização Fiscal</h3>
+
         <p>
           Utilização estratégica de créditos para regularização de passivos tributários.
         </p>
+
       </div>
 
       <div class="card">
+
         <div class="card-icon">🏦</div>
+
         <h3>Parcelamentos e Quitação</h3>
+
         <p>
           Redução de desembolso financeiro em parcelamentos e quitações tributárias.
         </p>
+
       </div>
 
       <div class="card">
+
         <div class="card-icon">📈</div>
+
         <h3>Eficiência de Caixa</h3>
+
         <p>
           Melhora do fluxo de caixa através da compra de créditos tributários com desconto.
         </p>
+
       </div>
 
     </div>
+
   </div>
 </section>
 
@@ -922,24 +1023,101 @@
   <div class="container">
 
     <div class="pricing">
-      <h3>Reduza riscos em operações tributárias de alto valor</h3>
 
-      <p style="margin-bottom: 24px; color:#c3cfdb;">
-        Nossa estrutura foi desenhada para trazer segurança institucional e previsibilidade para operações de créditos de ICMS.
+      <h3>
+        Compliance tributário, homologação e proteção operacional
+      </h3>
+
+      <p style="margin-bottom:24px;color:#c3cfdb;">
+        Estrutura técnica, jurídica e operacional desenhada para operações tributárias de alta complexidade.
       </p>
 
-      <p style="font-size:1.1rem; margin-bottom: 18px; line-height: 2;">
-        ✔ Validação prévia do crédito tributário<br>
-        ✔ Análise de elegibilidade para aprovação na SEFAZ/SP<br>
-        ✔ Mitigação de risco de glosa<br>
-        ✔ Estruturação jurídica especializada<br>
-        ✔ Suporte completo em homologação e-CredAc<br>
-        ✔ Operações privadas e confidenciais
+      <p style="font-size:1.1rem;margin-bottom:18px;line-height:2;">
+
+        ✔ Validação da origem e legitimidade do crédito<br>
+        ✔ Auditoria fiscal preventiva e análise documental<br>
+        ✔ Mitigação de risco de glosa e rejeição<br>
+        ✔ Homologação e-CredAc especializada<br>
+        ✔ Estruturação contratual completa<br>
+        ✔ Conta escrow e segurança financeira<br>
+        ✔ Operações privadas e confidenciais<br>
+        ✔ Suporte operacional até aprovação final na SEFAZ/SP
+
       </p>
 
       <p>
-        <strong>Modelo de remuneração:</strong> comissão sobre operações concluídas + serviços especializados de análise e estruturação.
+        <strong>Modelo de remuneração:</strong>
+        comissão sobre operações concluídas + estruturação técnica e tributária especializada.
       </p>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Documentação Necessária</h2>
+
+      <p>
+        Pré-análise documental para validação da operação e elegibilidade do crédito tributário.
+      </p>
+
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+
+        <div class="card-icon">📄</div>
+
+        <h3>GIA Atualizada</h3>
+
+        <p>
+          Última Guia de Informação e Apuração do ICMS da empresa.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <div class="card-icon">📊</div>
+
+        <h3>Extrato e-CredAc</h3>
+
+        <p>
+          Extrato atualizado da conta corrente do saldo credor apropriado.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <div class="card-icon">🏛</div>
+
+        <h3>Regularidade Fiscal</h3>
+
+        <p>
+          Certidão da situação fiscal junto à Secretaria da Fazenda do Estado de São Paulo.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <div class="card-icon">🧾</div>
+
+        <h3>Contrato Social</h3>
+
+        <p>
+          Contrato social e alterações para validação societária e poderes.
+        </p>
+
+      </div>
+
     </div>
 
   </div>
@@ -949,51 +1127,63 @@
   <div class="container contact">
 
     <div>
-      <div class="badge">Fale com um especialista</div>
 
-      <h2 style="font-size:2.7rem; margin-bottom:18px; line-height:1.1;">
+      <div class="badge">
+        Fale com um especialista
+      </div>
+
+      <h2 style="font-size:2.7rem;margin-bottom:18px;line-height:1.1;">
         Estruture sua próxima operação de ICMS com segurança.
       </h2>
 
-      <p style="color:#b6c1cf; margin-bottom:28px; max-width:560px;">
+      <p style="color:#b6c1cf;margin-bottom:28px;max-width:560px;">
         Nossa equipe atua na estruturação de operações de compra e venda de créditos de ICMS para empresas dos setores industrial, agroindustrial, atacadista, varejista, importador e distribuidor em todo o estado de São Paulo.
       </p>
 
-      <p style="color:#d5e0ea; margin-bottom:30px;">
+      <p style="color:#d5e0ea;margin-bottom:30px;">
         Especialistas em operações com deságio, homologação e segurança tributária.
       </p>
 
-      <div style="display:grid; gap:16px; color:#d6deea;">
+      <div style="display:grid;gap:16px;color:#d6deea;">
         <div>📧 contato@icmsexchange.com.br</div>
         <div>📞 +55 (11) 99999-9999</div>
         <div>📍 São Paulo • Brasil</div>
       </div>
+
     </div>
 
     <div class="hero-card">
+
       <form>
-        <input type="text" placeholder="Nome da empresa" required />
-        <input type="text" placeholder="Nome do responsável" required />
-        <input type="email" placeholder="E-mail corporativo" required />
-        <input type="tel" placeholder="Telefone" required />
+
+        <input type="text" placeholder="Nome da empresa" required>
+
+        <input type="text" placeholder="Nome do responsável" required>
+
+        <input type="email" placeholder="E-mail corporativo" required>
+
+        <input type="tel" placeholder="Telefone" required>
 
         <textarea placeholder="Descreva sua necessidade: compra ou venda de crédito, ticket estimado, volume, segmento, etc."></textarea>
 
         <button type="submit" class="btn btn-primary">
           Solicitar análise preliminar do crédito
         </button>
+
       </form>
+
     </div>
 
   </div>
 </section>
 
 <footer>
+
   <div class="container footer-content">
 
     <div>
       <strong>ICMSExchange</strong><br>
-      Intermediação de Créditos Tributários
+      Marketplace de Créditos Tributários
     </div>
 
     <div>
@@ -1001,22 +1191,35 @@
     </div>
 
   </div>
+
 </footer>
 
 <script>
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+
+    anchor.addEventListener('click', function(e){
+
       e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
+
+      document
+        .querySelector(this.getAttribute('href'))
+        .scrollIntoView({
+          behavior:'smooth'
+        });
+
     });
+
   });
 
-  document.querySelector('form').addEventListener('submit', function(e) {
+  document.querySelector('form').addEventListener('submit', function(e){
+
     e.preventDefault();
+
     alert('Obrigado pelo contato. Nossa equipe retornará em breve.');
+
   });
+
 </script>
 
 </body>
